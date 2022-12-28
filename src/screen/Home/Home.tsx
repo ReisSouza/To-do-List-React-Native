@@ -12,6 +12,9 @@ const initialTasks = ()=>{
   return [] as TasksType[]
 };
 
+const [state, setState] = useState<[]>([])
+
+
 function tasksReducer(tasks:TasksType[], action:Action) {
   switch (action.type) {
     case 'added': {
